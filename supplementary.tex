@@ -1,0 +1,70 @@
+%&~/tools/latex/preamble-memoir
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setromanfont[Ligatures=TeX]{TeX Gyre Pagella}
+\setmathfont[math-style=ISO,bold-style=ISO]{TeX Gyre Pagella Math}
+\setmonofont{Inconsolata}
+
+\setsecnumdepth{subsubsection}
+\counterwithout{section}{chapter}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\date{\today}
+\title{Supplementary Material for "The seasonal cycle of upper-ocean turbulence in the Bay of Bengal."}
+\begin{document}
+
+\maketitle
+\renewcommand{\thefigure}{S\arabic{figure}}
+\newcommand{\niw}{_\text{in}}
+
+We present summary time series for all χpods on all moorings in the following figures.
+
+\begin{landscape}
+\begin{center}
+\includegraphics[width=\linewidth]{images/summaries/summary-NRL1.png}
+\captionof{figure}{Daily averaged time series for χpod moorings. NRL1. (left column, top to bottom): Wind stress \(\tau\) (black) and net surface heat flux \(J_q^0\) (color); \(N^2\) at \(\chi\)pod depths; Net shear and \(\chi\)pod depths in black; \(u\); \(v\); EKE and SSH anomaly from AVISO. (right column, top to bottom) T (horizontal lines show \(\chi\)pod depths); S; Near-inertial kinetic energy \(KE\niw\); \(\partial T/\partial z\); \(K_T\); \(J_q^t\) at \(\chi\)pod depths (same colors as in \(N^2\) panel).}
+\end{center}
+\end{landscape}
+
+\begin{landscape}
+\begin{center}
+\includegraphics[width=\linewidth]{images/summaries/summary-NRL3.png}
+\captionof{figure}{Same as Figure S1 but for NRL3.}
+\end{center}
+\end{landscape}
+
+\begin{landscape}
+\begin{center}
+\includegraphics[width=\linewidth]{images/summaries/summary-NRL4.png}
+\captionof{figure}{Same as Figure S1 but for NRL4.}
+\end{center}
+\end{landscape}
+
+\begin{landscape}
+\begin{center}
+\includegraphics[width=\linewidth]{images/summaries/summary-NRL5.png}
+\captionof{figure}{Same as Figure S1 but for NRL5.}
+\end{center}
+\end{landscape}
+
+\begin{landscape}
+\begin{center}
+\includegraphics[width=\linewidth]{images/summaries/summary-RAMA-12N-2014.png}
+\captionof{figure}{Same as Figure S1 but for RAMA 12N (2014). Shear is not available at the RAMA moorings.}
+\end{center}
+\end{landscape}
+
+\begin{landscape}
+\begin{center}
+\includegraphics[width=\linewidth]{images/summaries/summary-RAMA-12N-2015.png}
+\captionof{figure}{Same as Figure S5 but for RAMA 12N (2015).}
+\end{center}
+\end{landscape}
+
+\begin{landscape}
+\begin{center}
+\includegraphics[width=\linewidth]{images/summaries/summary-RAMA-15N.png}
+\captionof{figure}{Same as Figure S5 but for RAMA 15N.}
+\end{center}
+\end{landscape}
+\end{document}
