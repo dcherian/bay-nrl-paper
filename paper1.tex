@@ -212,7 +212,7 @@ These frequency ranges are shaded in Figure \ref{fig:nrlspectra}.
 Given the previous discussion, we incorporate near tidal shear with \(S\niw\).
 The combined sum \(S\niwp\) represents any shear associated with near-inertial waves, advection of near-inertial waves by the tide as well as any tidal shear.
 
-Depth-time maps of the mean squared shear for three shear components \(S\low, S\niwp, S\res\) along with the total shear \(S\tot\) are shown in Figure \ref{fig:shears}.
+Depth-time maps of the mean squared shear for three shear components \(S\low, S\niwp, S\res\) along with the total shear \(S\tot\) are shown in Figure \ref{fig:shears} (normalized by the temperature contribution to stratification $N_T²$).
 At all three moorings, energetic shear is observed in January, February, and for an extended period between July and November.
 The shear field is relatively weak between mid-March and the beginning of June.
 Episodic energetic bursts in near-inertial shear are seen at all three moorings outside these months.
@@ -382,14 +382,15 @@ Their mean profile of $ε$ shows $ε≥\SI{1e-9}{\W\per\kg}$ in the top \SI{120}
 \cite{Lucas2016} infer \(K_T \le \SI{1e-6}{\m\squared\per\s}\) for depths deeper than \SI{40}{m} using a χpod sensor on a vertical profiling platform (Wirewalker, \citealp{Pinkel2011}).
 Finally finestructure estimates of dissipation estimated using LADCP shear profiles for the GO-SHIP\footnote{Global Ship-based Hydrographic Investigations Program} I01 section at approximately 10°N in the Bay of Bengal yield \(K_ρ \approx \SI{1e-6}{\m\squared\per\s}\) (\(5κ_T\);  \citealp{Kunze2006}).
 
-A non-dimensional parameter that characterizes the transition from laminar to turbulent flow is the buoyancy Reynolds number \(\Rey_b = ε/(νN^2)\).
+A non-dimensional parameter that characterizes the transition from laminar to turbulent flow is the buoyancy Reynolds number \(\Rey_b = ε/(νN^2)\) \citep[for example][]{Itsweire1993}.
 When \(ε \approx \SI{1e-9}{\W\per\kg}\), \(N²≈ \SI{1e-3}{\per\s\squared}\) \citep{Jinadasa2016,St.Laurent2017} and molecular viscosity \(ν \approxeq \SI{1e-6}{\m\squared\per\s}\), $\Rey_b \approx 1$.
 At such low values of $\Rey_b$, overturning turbulence ceases to exist and total diffusivity asymptotes to \(κ_T\) in direct numerical simulations as well as experiments (for e.g. \citealp{Ivey2008}, their Figure 2; \citealp{Itsweire1993}).
-The microstructure $ε$ measurements of \cite{Jinadasa2016} and \cite{St.Laurent2017} then independently indicate that near-molecular diffusivities are frequently present in the Bay.
+The microstructure $ε$ measurements of \cite{Jinadasa2016} and \cite{St.Laurent2017} then independently indicate that weakly turbulent flows with near-molecular diffusivities are present in the Bay.
 
 Low thermocline diffusivities are predicted by the finestructure internal-wave scaling of \cite{Henyey1986} and have been observed previously at low latitudes in the Pacific and Atlantic: \(K_ρ \approx (1\mhyph 3) \times \SI{1e-6}{\m\squared\per\s} (5-15 κ_T)\) for latitudes south of 10°N in \cite{Gregg2003}.
 Our lowest observed values during March, April at approximately \SIrange{80}{100}{m} depths are frequently lower than those observations (Figures \ref{fig:vert} and \ref{fig:nrl}b).
-Low values of \(K_T\) are perhaps not surprising given the observations summarized above but these χpod observations are the first to show that extremely low mixing (\(K_T ≤ 1\mhyph 10 κ_T\)) persists for multiple weeks at multiple locations in the south-central Bay (Figures \ref{fig:nrl}b and \ref{fig:vert}).
+The extended period of low \(K_T\) values is perhaps unsurprising given the observations summarized above and that the transition months of March and April are a period of very low wind energy input i.e. weak inertial inertial shear; weak mean flows i.e. weak low frequency shear; and considerable stratification (note low $S²/N²$ in Figure \ref{fig:shears}).
+However these χpod observations are the first to show that extremely low mixing (\(K_T ≤ 1\mhyph 10 κ_T\)) persists for multiple weeks at multiple locations in the south-central Bay (Figures \ref{fig:nrl}b and \ref{fig:vert}).
 
 It is possible that an inability to represent the observed low values of mixing has consequences for simulations of the Indian Ocean.
 \cite{Wilson2016a} find that ``negative salinity biases at 50-m depth are associated with positive salinity biases near the surface'' between February and May in an assimilative HYCOM simulation of the Bay.
@@ -565,14 +566,14 @@ Rotary power spectral density of total shear \(S\tot\) at all three moorings est
 \centering
 \includegraphics[width=\textwidth]{figure5-shears.png}
 \caption{\label{fig:shears}
-Weekly running mean-squared shear for the three moorings (top to bottom): (a-c) total shear \(S\tot^2\); (d-f) low-frequency shear \(S\low^2\); (g-i) total near-inertial shear \(S\niwp^2\) (j-l) residual shear \(S\res^2\). All components are normalized by the normalized by 30-day lowpass filtered \(N^2_T\). χpod depths for both χpods are shown in black in all panels. White contours mark levels \num{2e-3}, \num{4e-3} and \num{6e-3}.}
+Weekly running mean-squared shear for the three moorings (top to bottom): (a-c) total shear \(S\tot^2\); (d-f) low-frequency shear \(S\low^2\); (g-i) total near-inertial shear \(S\niwp^2\) (j-l) residual shear \(S\res^2\). All components are normalized by the normalized by 30-day lowpass filtered \(N_T² = g \alpha T_z\). Regions with $N_T² < \SI{1e-5}{\per\second\squared}$ are excluded. χpod depths for both χpods are shown in black in all panels. White contours mark levels \num{0.75}, \num{1.25}.}
 \end{figure*}
 
 \begin{figure*}
 \centering
 \includegraphics[width=\textwidth]{figure6-nrl5.pdf}
 \caption{\label{fig:nrl}
-A year of observations at NRL5, 105m. Time series of daily averaged quantities: (a) Tropflux wind stress; (b) daily averaged \(K_T\); (c) turbulent heat and salt fluxes \(J_q^t, J_s^t\); (d) Buoyancy frequency \(N^2\) and temperature contribution to \(N^2\), \(g \alpha T_z\); (e) Weekly running mean of filtered squared shear magnitude normalized by $N²$: low pass in black $S\low$, near-inertial bandpass $S\niwp$ in green and the residual $S\res$ in orange; (f) \(\chi\)pod depth. Background colors mark seasons; white region indicates time period shown in Figure \ref{fig:nrl5-niw}.}
+A year of observations at NRL5, 105m. Time series of daily averaged quantities: (a) Tropflux wind stress; (b) daily averaged \(K_T\); (c) turbulent heat and salt fluxes \(J_q^t, J_s^t\); (d) Buoyancy frequency \(N^2\) and temperature contribution to \(N^2\), \(N_T² = g \alpha T_z\); (e) Weekly running mean of filtered squared shear magnitude normalized by $N²$: low pass in black $S\low$, near-inertial bandpass $S\niwp$ in green and the residual $S\res$ in orange; (f) \(\chi\)pod depth. Background colors mark seasons; white region indicates time period shown in Figure \ref{fig:nrl5-niw}.}
 \end{figure*}
 
 \begin{figure*}
